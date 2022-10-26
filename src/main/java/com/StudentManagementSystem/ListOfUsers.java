@@ -18,13 +18,42 @@ public class ListOfUsers extends HttpServlet {
         for(Entity e1 : e)
         {
             //System.out.println(e1);
-            String fname = e1.getProperty("FirstName").toString();
-            String lname = e1.getProperty("LastName").toString();
-            String rollnum = e1.getProperty("RollNo").toString();
-            String phy = e1.getProperty("Physics").toString();
-            String chem = e1.getProperty("Chemistry").toString();
-            String maths = e1.getProperty("Maths").toString();
-            out.println("\nName:"+fname+" "+lname+"\n"+"Roll No.:"+rollnum+"\n"+"Physics:"+phy+"\n"+"Chemistry:"+chem+"\n"+"Maths:"+maths+"\n");
+
+                String fname = e1.getProperty("FirstName").toString();
+                String lname = e1.getProperty("LastName").toString();
+                String rollnum = e1.getProperty("RollNo").toString();
+                String phy;
+                String chem;
+                String maths;
+                if(e1.getProperty("Physics")!=null)
+               {
+                   phy = e1.getProperty("Physics").toString();
+               }
+               else
+               {
+                   phy=null;
+               }if(e1.getProperty("Chemistry")!=null)
+            {
+                chem = e1.getProperty("Chemistry").toString();
+            }
+            else
+            {
+                chem=null;
+            }
+            if(e1.getProperty("Maths")!=null)
+            {
+                maths = e1.getProperty("Maths").toString();
+            }
+            else {
+                maths = null;
+            }
+
+            out.println("Name:"+fname+" "+lname);
+            out.println("Roll No.:"+rollnum);
+            out.println("Physics:"+phy);
+            out.println("Chemistry:"+chem);
+            out.println("Maths:"+maths);
+
         }
 
 
