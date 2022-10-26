@@ -13,8 +13,23 @@ public class registerServlet extends HttpServlet {
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
         boolean flag;
         PrintWriter out = res.getWriter();
+        if(req.getParameter("fname").equals(""))
+        {
+            out.println("<h3>Name cannot be Empty</h3>");
+            return;
+        }
         String fname = req.getParameter("fname");
+        if(req.getParameter("lname").equals(""))
+        {
+            out.println("ERROR : Name cannot be Empty");
+            return;
+        }
         String lname = req.getParameter("lname");
+        if(req.getParameter("rollnum")==null)
+        {
+            out.println("<h3>Roll No. cannot be Empty</h3>");
+            return;
+        }
         String rollnum = req.getParameter("rollnum");
         String phy = req.getParameter("phy");
         String chem = req.getParameter("chem");
@@ -24,7 +39,9 @@ public class registerServlet extends HttpServlet {
 
         if(flag)
         {
-            out.println("<h1>Successfully Registered!");
+            out.println("<h1>Successfully Registered!</h1><br>");
+            out.println("<a href='index.html'>Go To Home Page</a>");
+
         }
         else
         {
