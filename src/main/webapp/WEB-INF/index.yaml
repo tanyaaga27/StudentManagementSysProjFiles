@@ -1,0 +1,10 @@
+indexes:
+
+  - kind: student
+    properties:
+      - name: FirstName
+      - name: RollNo
+        direction: asc
+        
+
+

@@ -17,42 +17,28 @@ public class ListOfUsers extends HttpServlet {
         Iterable<Entity> e = UserOps.listOfUsers();
         for(Entity e1 : e)
         {
-            //System.out.println(e1);
-
-                String fname = e1.getProperty("FirstName").toString();
-                String lname = e1.getProperty("LastName").toString();
-                String rollnum = e1.getProperty("RollNo").toString();
-                String phy;
-                String chem;
-                String maths;
-                if(e1.getProperty("Physics")!=null)
-               {
-                   phy = e1.getProperty("Physics").toString();
-               }
-               else
-               {
-                   phy=null;
-               }if(e1.getProperty("Chemistry")!=null)
-            {
-                chem = e1.getProperty("Chemistry").toString();
-            }
-            else
-            {
-                chem=null;
-            }
-            if(e1.getProperty("Maths")!=null)
-            {
-                maths = e1.getProperty("Maths").toString();
-            }
-            else {
-                maths = null;
-            }
-
-            out.println("Name:"+fname+" "+lname);
-            out.println("Roll No.:"+rollnum);
-            out.println("Physics:"+phy);
-            out.println("Chemistry:"+chem);
-            out.println("Maths:"+maths);
+            String fname = e1.getProperty("FirstName").toString();
+            String lname = e1.getProperty("LastName").toString();
+            String rollnum = e1.getProperty("RollNo").toString();
+            String phy = e1.getProperty("Physics").toString();
+            String chem = e1.getProperty("Chemistry").toString();
+            String maths = e1.getProperty("Maths").toString();
+            out.print("<html><p>Name:");
+            out.print(fname+" "+lname+"</p>");
+            //out.println("<br>");
+            out.print("<html><p>Roll No.:");
+            out.print(rollnum+"</p>");
+            //out.println("<br>");
+            out.print("<html><p>Physics:");
+            out.print(phy+"</p>");
+            //out.println("<br>");
+            out.print("<html><p>Chemistry:");
+            out.print(chem+"</p>");
+            //out.println("<br>");
+            out.print("<html><p>Maths:");
+            out.print(maths+"</p>");
+            //out.println("<br>");
+            out.print("</html>");
 
         }
 
