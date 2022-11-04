@@ -4,25 +4,34 @@
     <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
     <link href='//fonts.googleapis.com/css?family=Marmelad' rel='stylesheet' type='text/css'>
     <title>Student Management System</title>
+    <style>
+    body { background-color:PowderBlue;}
+    </style>
+
 </head>
+
 <body>
 <h1>Student Management System</h1>
 <table>
     <tr>
         <td colspan="2" style="font-weight:bold;">Available Services:</td>
+
     </tr>
+
     <tr>
-        <td><a href="details.html">Provide New Student Detail here!</a></td>
+
+       <td><a href="details.html">Provide New Student Detail here!</a></td>
 
     </tr>
     <tr>
-        <td><a href="ListOfUsers">Show Existing Users</a></td>
 
+      <td><a href="ListOfUsers">Show Existing Users</a></td>
     </tr>
     <tr>
+
         <td>
             <p>Search For a Student</p>
-            <form action = "search" method="GET">
+            <form action = "searchResultJsp.jsp" method="GET">
                 <label>Provide the first name :</label><br>
                 <input type="text" name="fname">
                 <input type="submit">
