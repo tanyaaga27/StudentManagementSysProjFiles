@@ -12,68 +12,28 @@
     background-color:white;
     text-align: center;
     }
-    .second{
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    }
-    .third{
-    width:200px;
-    height:200px;
-    margin-left: auto;
-    margin-right: auto;
-    }
+
     </style>
 
 </head>
 
 <body>
 <div class="first">
-<h1>Student Management System</h1>
-</div>
-<div class="second">
-    <p><a href="details.html">Provide New Student Detail here!</a></p>
-    <a href="ListOfUsersJsp.jsp">Show Existing Users</a>
-
+    <h1>Student Management System</h1>
 </div>
 
-<div class="third">
-    <h3>Search For a Student</h3>
-    <form action = "searchResultJsp.jsp" method="GET">
-    <label>Provide the first name :</label><br>
-    <input type="text" name="fname"><br>
-    <input type="submit">
-</form>
-</div>
-<!--
-<table class="second">
-    <tr>
-        <td colspan="2" style="font-weight:bold;">Available Services:</td>
+<button id="login">Login</button>
+<script type="text/javascript">
+    document.getElementById("login").onclick = function () {
+        location.href = "login.html";
+    };
+</script>
+<button id="register">Register</button>
+<script type="text/javascript">
+    document.getElementById("register").onclick = function () {
+        location.href = "registerUser.html";
+    };
+</script>
 
-    </tr>
-
-    <tr>
-
-        <td><a href="details.html">Provide New Student Detail here!</a></td>
-
-    </tr>
-    <tr>
-
-        <td><a href="ListOfUsers">Show Existing Users</a></td>
-    </tr>
-    <tr>
-
-        <td>
-            <p>Search For a Student</p>
-            <form action = "searchResultJsp.jsp" method="GET">
-                <label>Provide the first name :</label><br>
-                <input type="text" name="fname">
-                <input type="submit">
-            </form>
-        </td>
-
-    </tr>
-</table>
--->
 </body>
 </html>

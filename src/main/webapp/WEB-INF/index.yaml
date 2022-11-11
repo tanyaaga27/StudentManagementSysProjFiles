@@ -5,6 +5,11 @@ indexes:
       - name: FirstName
       - name: RollNo
         direction: asc
+
+  - kind: userLogin
+    properties:
+      - name: email
+      - name: password
         
 
 
