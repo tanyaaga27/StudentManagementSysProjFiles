@@ -23,6 +23,16 @@ public class loginVerifyServlet extends HttpServlet {
 
         String email = req.getParameter("email");
         String password = req.getParameter("password");
+        if(email.equals(""))
+        {
+            out.println("Email Cannot Be Empty.");
+            return;
+        }
+        if(password.equals(""))
+        {
+            out.println("Please provide password.");
+            return;
+        }
         Filter emailFilter = new FilterPredicate("email", Query.FilterOperator.EQUAL, email);
         Filter passwordFilter = new FilterPredicate("password", Query.FilterOperator.EQUAL, password);
 
