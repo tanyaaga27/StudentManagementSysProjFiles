@@ -4,32 +4,36 @@
     <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
     <link href='//fonts.googleapis.com/css?family=Marmelad' rel='stylesheet' type='text/css'>
     <title>Student Management System</title>
+    <style>
+    body { background-color:PowderBlue;
+    text-align: center;
+    }
+    .first{
+    background-color:white;
+    text-align: center;
+    }
+
+    </style>
+
 </head>
+
 <body>
-<h1>Student Management System</h1>
-<table>
-    <tr>
-        <td colspan="2" style="font-weight:bold;">Available Services:</td>
-    </tr>
-    <tr>
-        <td><a href="details.html">Provide New Student Detail here!</a></td>
+<div class="first">
+    <h1>Student Management System</h1>
+</div>
 
-    </tr>
-    <tr>
-        <td><a href="ListOfUsers">Show Existing Users</a></td>
+<button id="login">Login</button>
+<script type="text/javascript">
+    document.getElementById("login").onclick = function () {
+        location.href = "login.html";
+    };
+</script>
+<button id="register">Register</button>
+<script type="text/javascript">
+    document.getElementById("register").onclick = function () {
+        location.href = "registerUser.html";
+    };
+</script>
 
-    </tr>
-    <tr>
-        <td>
-            <p>Search For a Student</p>
-            <form action = "search" method="GET">
-                <label>Provide the first name :</label><br>
-                <input type="text" name="fname">
-                <input type="submit">
-            </form>
-        </td>
-
-    </tr>
-</table>
 </body>
 </html>

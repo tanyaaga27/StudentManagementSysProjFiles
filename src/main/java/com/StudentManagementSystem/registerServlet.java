@@ -40,7 +40,7 @@ public class registerServlet extends HttpServlet {
         if(flag)
         {
             out.println("<h1>Successfully Registered!</h1><br>");
-            out.println("<a href='index.html'>Go To Home Page</a>");
+            out.println("<a href='afterLogin.html'>Go To Home Page</a>");
 
         }
         else

@@ -3,9 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Provide Details Here</title>
+  <style>
+
+    label{
+    top-margin : 5px;
+    display: inline-block;
+    width: 7%;
+    text-align: right;
+    }
+    input{
+    top-margin : 2px;
+    text-align: left;
+    }
+    body{
+    background-color:PowderBlue;
+    }
+
+
+
+  </style>
 </head>
 <body>
 
+<h2 style="background-color:white;">Provide New Student Details Here:</h2>
 <form action="register" method="post">
   <label>First Name :</label>
   <input type="text" name="fname"><br>
@@ -13,14 +33,14 @@
   <input type="text" name="lname"><br>
   <label>Roll No. :</label>
   <input type="text" name="rollnum"><br>
-  <p>MARKS :</p><br>
+
   <label>Physics :</label>
   <input type="text" name="phy"><br>
   <label>Chemistry :</label>
   <input type="text" name="chem"><br>
   <label>Maths :</label>
   <input type="text" name="math"><br>
-  <input type="submit">
+  <input type="submit" style="position:absolute; left:8%; top-margin : 5px;">
 
 </form>
 

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <link href='//fonts.googleapis.com/css?family=Marmelad' rel='stylesheet' type='text/css'>
+    <title>Student Management System</title>
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+<form action="loginverify" method="post">
+    <label >Email ID : </label>
+    <input type="text" name="email" id="email"><br>
+    <label>Password : </label>
+    <input type="password" name="password" id="password"><br>
+    <input type="submit" onclick="return checktextfield()">
+</form>
+<script type="text/javascript">
+
+    function checktextfield()
+    {
+    let email = document.getElementById('email').value;
+    let password = document.getElementById('password').value;
+    if(email=="")
+    {
+    alert('Please Provide Email!!!');
+    return false;
+    }
+    if(password=="")
+    {
+    alert('Please provide password!!!');
+    return false;
+    }
+    return true;
+
+    }
+</script>
+</body>
+</html>

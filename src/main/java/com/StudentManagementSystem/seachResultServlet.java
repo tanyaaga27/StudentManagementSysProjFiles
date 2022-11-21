@@ -60,7 +60,7 @@ public class seachResultServlet extends HttpServlet {
             }catch(NullPointerException e)
             {
                 out.println("Empty fields not allowed!");
-                out.println("<a href='index.html'>Try Again</a>");
+                out.println("<a href='afterLogin.html'>Try Again</a>");
             }
 
 
